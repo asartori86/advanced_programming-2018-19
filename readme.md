@@ -1,6 +1,6 @@
 # Advanced Programming [![Build Status](https://travis-ci.org/asartori86/advanced_programming-2018-19.svg?branch=master)](https://travis-ci.org/asartori86/advanced_programming-2018-19)
 
-[SISSA webpage](http://www.math.sissa.it/course/phd-course-master-course/advanced-programming)
+[SISSA webpage](http://www.math.sissa.it/course/phd-course-master-course/advanced-programming-0)
 
 Provide advanced knowledge of both theoretical and practical
 programming in C++ and Python, with particular regard to the
@@ -19,13 +19,10 @@ continuous integration, unit testing).
 
  - The C++ Programming Language, Bjarne Stroustrup, Addison-Wesley
    2013, ISBN 978-0321563842
- 
-- Design Patterns: Elements of Reusable Object-Oriented Software,
-  Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides, Pearson
-  Education 1993.
 
 ## Locations
-Lecture room is A-005 in the main SISSA building in via Bonomea 265.
+- Lecture room is A-005 in the main SISSA building in via Bonomea 265.
+- On 9/10 and 11/10 the lectures will be held in A-004
 
 ## Syllabus
 
