@@ -1,4 +1,4 @@
-#include <iomanip>
+#include <iomanip>  // std::setprecision
 #include <iostream>
 #include <cmath>  // M_PI
 #include <string>
