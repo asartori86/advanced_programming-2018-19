@@ -1,21 +1,21 @@
 #include <iomanip>
 #include <iostream>
-#include <math.h> // M_PI
+#include <cmath>  // M_PI
 #include <string>
 
 int main() {
   // built-in types
-  int a{-1}; // long long int, unsigned int
+  int a{-1};  // long long int, unsigned int
   // int a = -1; //  is fine
   std::cout << a << std::endl;
 
-  double b{2.2}; // long double, float
+  double b{2.2};  // long double, float
   std::cout << b << std::endl;
 
-  char c{'r'}; // unsigned char, signed char, wchar_t
+  char c{'r'};  // unsigned char, signed char, wchar_t
   std::cout << c << std::endl;
 
-  bool t{true}; // false,0,1,...
+  bool t{true};  // false,0,1,...
   std::cout << t << std::endl;
 
   // check the size of a variable type
@@ -39,8 +39,8 @@ int main() {
   std::cout << s;
 
   // narrowing effect
-  int var = 6.9; // try to initialize var with the universal and
-                 // uniform initialization
+  int var = 6.9;  // try to initialize var with the universal and
+                  // uniform initialization
   // int v_narrow {6.9}; // compiler error or warning with variables
   // int v_narrow_w {int(a+b)}; // suppress error/warning with a cast
 
@@ -54,10 +54,10 @@ int main() {
   var++;
   ++var;
 
-  var = a + b; // works also for strings
+  var = a + b;  // works also for strings
   var = a - b;
   var = a * b;
-  var = a % var; // modulus operator just between integers
+  var = a % var;  // modulus operator just between integers
 
   bool test;
   test = a == b;
@@ -78,9 +78,9 @@ int main() {
   const int cc{7};
   // cc = 9;			// error
 
-  constexpr double ce{cc * 8.1234 / M_PI}; // evaluated at compile-time
+  constexpr double ce{cc * 8.1234 / M_PI};  // evaluated at compile-time
 
-  int ve{int(ce * a)}; // ok create a variable from constexpr
+  int ve{int(ce * a)};  // ok create a variable from constexpr
 
   // constexpr int  n_ce {ve*8.1234/M_PI}; // error
 

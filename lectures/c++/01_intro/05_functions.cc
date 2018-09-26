@@ -1,8 +1,8 @@
 #include <iostream>
 
 void buggy_swap(int a, int b);
-void swap_c(int *a, int *b);
-void swap_cxx(int &a, int &b); // can we do better?
+void swap_c(int* a, int* b);
+void swap_cxx(int& a, int& b);  // can we do better?
 
 int main() {
   int a = 3;
@@ -27,13 +27,13 @@ void buggy_swap(int a, int b) {
   a = tmp;
 }
 
-void swap_c(int *a, int *b) {
+void swap_c(int* a, int* b) {
   int tmp = *b;
   *b = *a;
   *a = tmp;
 }
 
-void swap_cxx(int &a, int &b) {
+void swap_cxx(int& a, int& b) {
   int tmp = b;
   b = a;
   a = tmp;

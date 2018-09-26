@@ -1,10 +1,12 @@
 #include <iostream>
 
-void new_line() { std::cout << std::endl; }
+void new_line() {
+  std::cout << std::endl;
+}
 
 int main() {
   for (int i = 0; i < 10; ++i) {
-    std::cout << i << " "; // if the action is just one line, {} can be omitted
+    std::cout << i << " ";  // if the action is just one line, {} can be omitted
   }
 
   new_line();
@@ -21,5 +23,5 @@ int main() {
 
   do {
     std::cout << "inside do \n";
-  } while (i < 2); // note ; at the end
+  } while (i < 2);  // note ; at the end
 }
