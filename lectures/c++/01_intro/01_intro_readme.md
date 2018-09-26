@@ -3,7 +3,7 @@
 
 
 
-## hello_name.cc [file] (./hello_name.cc)
+## hello_name.cc [[file] (./hello_name.cc)]
 
 Introduction program that says hello to the user, after this one has
 inserted his name and age. You can see the usage of `std::cout` and `std::cin`, and
