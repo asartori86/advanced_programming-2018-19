@@ -1,21 +1,27 @@
 # Lecture 01_intro
 
 
-## [hello_name.cc] (./hello_name.cc)
+
+
+## hello_name.cc [file] (./hello_name.cc)
 
 Introduction program that says hello to the user, after this one has
 inserted his name and age. You can see the usage of `std::cout` and `std::cin`, and
 an example of the class string.
 
+PPP: chapter 2, take a look also at chapter 1
 
 
-## [loops.cc] (./loops.cc)
+
+
+## loops.cc ![file] (./loops.cc)
 
 Example with the most common types of loops in C++: the `for` loop, the `while` and
 the `do while` loop.
 
 
 PPP: chapter 4.4
+
 
 
 
@@ -46,6 +52,7 @@ CPL: chap 7.2 for pointers, 7.7 for references
 
 
 ## [functions.cc] (./functions.cc)
+
 
 Three different implementation of a function that swaps two integers, one of them is used to
 introduce the concept of *pass by reference*.
