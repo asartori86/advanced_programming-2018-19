@@ -9,7 +9,7 @@ an example of the class string.
 
 
 
-### loops.cc
+## loops.cc
 
 Example with the most common types of loops in C++: the `for` loop, the `while` and
 the `do while` loop.
