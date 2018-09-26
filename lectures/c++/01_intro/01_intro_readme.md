@@ -1,7 +1,7 @@
 # Lecture 01_intro
 
 
-### hello_name.cc
+## hello_name.cc
 
 Introduction program that says hello to the user, after this one has
 inserted his name and age. You can see the use of `std::cout` and `std::cin`, and
@@ -19,7 +19,7 @@ PPC: chapter 4.4
 
 
 
-### variables.cc
+## variables.cc
 
 Introduces many built-in types (such as int, double, char, bool and strings), and
 also some basic operations defined on them (like +, -, +=, -=, ==, <=, and %).
@@ -33,7 +33,7 @@ CPL: all chapter 6 is dedicated to types but is too technical, 6.3.5 explains
 
 
 
-### vars_pointers_refs.cc
+## vars_pointers_refs.cc
 
 
 Small introduction to the usage of *pointers* and *references*.
@@ -45,7 +45,7 @@ CPL: chap 7.2 for pointers, 7.7 for references
 
 
 
-### functions.cc
+## functions.cc
 
 Three different implementation of a function that swaps two integers, one of them is used to
 introduce the concept of *pass by reference*.
@@ -64,7 +64,7 @@ CPL: all chap 12 is dedicated to functions, but maybe is too detailed for the mo
 
 
 
-References:
+### References:
 
 [PPC]  Programming: Principles and Practice using C++ (Second Edition), Bjarne Stroustrup, Addison-Wesley 2014, ISBN 978-0-321-99278-9
 
