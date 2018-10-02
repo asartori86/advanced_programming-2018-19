@@ -34,7 +34,7 @@ Syllabus:
 - Very first time `(N==0)`
   - open a terminal
   - `cd` in a suitable folder
-  - `git clone https://github.com/asartori86/advanced-programming.git`
+  - `git clone https://github.com/asartori86/advanced_programming-2018-19.git`
   - `cd advanced-programming`
   - take a look at [software carpentry lecture](http://swcarpentry.github.io/git-novice/) and [pro git book](https://git-scm.com/book/en/v2) 
 - `N > 0`
