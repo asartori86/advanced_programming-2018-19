@@ -2,11 +2,16 @@
 
 [SISSA webpage](http://www.math.sissa.it/course/phd-course-master-course/advanced-programming-0)
 
-Provide advanced knowledge of both theoretical and practical
-programming in C++ and Python, with particular regard to the
-principles of object oriented programming and best practices of
-software development (advanced use of version control systems,
-continuous integration, unit testing).
+The course aims to provide advanced knowledge of both theoretical and practical programming in C++11 and Python3, with particular regard to the principles of object-oriented programming and best practices of software development.
+
+Syllabus:
+
+- Introduction to C++11. You will learn the logic and the basics of C++11, the built-in data types and how to effectively use them. Best practices in programming will be addressed.
+- Object orientation in C++11. The principles of Object-Oriented programming will be presented with particular attention to their implementations in C++11. Some of the most important Design Patterns will be discussed.
+- Advanced features of C++14/17. Some of the new features of standard C++/14/17 will be introduced and explained.
+- Python3. After a recap of the basics of Python3, you will learn how to program in object-oriented fashion in the Python3 programming language.
+- How to combine the two languages. Several methods to combine the two languages will be presented.
+
 
 ## Prerequisites
 - Familiarity with linux terminal and a text editor (e.g., emacs, vim)
@@ -23,28 +28,6 @@ continuous integration, unit testing).
 ## Locations
 - Lecture room is A-005 in the main SISSA building in via Bonomea 265.
 - On 9/10 and 11/10 the lectures will be held in A-004
-
-## Syllabus
-
-1. Scientific programming environment. You will learn the basic
-   ingredients needed to efficiently develop scientific software in
-   *nix environment.
-
-2. Introduction to C++. You will learn the logic and the basics of
-   C++, the built-in data types and how to effectively use them. Best
-   practices in programming will be addressed.
-
-3. Object orientation in C++. The principles of Object-Oriented
-   programming will be presented with particular attention to their
-   implementations in C++. Some of the most important Design Patterns
-   will be discussed.
-
-4. Advanced features of C++11/14/17/20. Some of the new features of
-   standard C++11/14/17/20 will be introduced and explained.
-
-5. Object-Oriented programming in Python. After a recap of the basics
-   of Python, you will learn how to program in object-oriented fashion
-   in the Python programming language.
 
 ## How to get the material
 ### Non-experienced git users
