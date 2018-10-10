@@ -1,14 +1,16 @@
-# Simple Makefile to compile all the sample codes provided during the
-# course of Advanced Programming
+# Simple Makefile to compile, clean and format all the sample codes
+# provided during the course of Advanced Programming
 
-all:
-	+$(MAKE) $@ -C lectures/c++/01_intro
+default: all
 
-clean: 
-	+$(MAKE) $@ -C lectures/c++/01_intro
+all: 
+	+$(MAKE) $@ -C lectures
+
+clean:
+	+$(MAKE) $@ -C lectures
 	@find . -type f -name '*~' -exec rm '{}' \;
 
-format: 
-	+$(MAKE) $@ -C lectures/c++/01_intro
+format:
+	+$(MAKE) $@ -C lectures
 
-.PHONY: all clean format
+.PHONY: all clean format default
