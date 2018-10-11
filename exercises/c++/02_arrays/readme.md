@@ -65,7 +65,7 @@ insert number: 5
 3
 5
 
-$ ./a.out 10
+$ ./a.out
 insert number: 10
 2
 3
