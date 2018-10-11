@@ -8,7 +8,7 @@ all:
 
 clean:
 	+$(MAKE) $@ -C lectures
-	@find . -type f -name '*~' -exec rm '{}' \;
+	@find . -type f \( -name '*~' -o -name 'a.out' \) -exec rm '{}' \;
 
 format:
 	+$(MAKE) $@ -C lectures
