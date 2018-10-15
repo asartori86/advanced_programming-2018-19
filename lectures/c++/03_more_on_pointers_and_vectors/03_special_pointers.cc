@@ -33,6 +33,10 @@ int main() {
 
   // pi = NULL; // please don't do this
 
+  double* da{new double[5]{}};
+  delete[] da;  // dangling pointer
+  da = nullptr;
+
   if (pi != nullptr)
     std::cout << "pi is not nullptr and I can dereference it " << *pi
               << std::endl;
