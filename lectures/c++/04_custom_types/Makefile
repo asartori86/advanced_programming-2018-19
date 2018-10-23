@@ -1,9 +1,10 @@
 SRC = 01_enum.cc                    \
       02_scoped_enum.cc             \
       03_why_scoped.cc              \
-      04_struct_class.cc            \
-      05_constructor_destructor.cc  \
-      06_template_class.cc
+      04_namespace.cc               \
+      05_struct_class.cc            \
+      06_constructor_destructor.cc  \
+      07_template_class.cc
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -g -std=c++11
@@ -36,4 +37,4 @@ clean:
 
 01_enum.x : CXXFLAGS += -Wno-unused-variable
 02_scoped_enum.x : CXXFLAGS += -Wno-unused-variable
-04_struct_class.x : CXXFLAGS += -Wno-unused-but-set-variable -Wno-unknown-warning-option
+05_struct_class.x : CXXFLAGS += -Wno-unused-but-set-variable -Wno-unknown-warning-option
