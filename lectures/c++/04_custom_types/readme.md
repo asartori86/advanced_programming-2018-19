@@ -5,8 +5,7 @@
 
 [link to file](./01_enum.cc)
 
-The idea behind enumeration is to create a new type whose values are restricted to a specific
-range or set of values. This example illustrates the plain `enum` syntax and usage.
+The idea behind enumeration is to create a new type whose values are restricted to a specific range or set of values. This example illustrates the plain `enum` syntax and usage.
 
 PPP: chap 9.5
 CPL: chap 8.4
@@ -17,9 +16,7 @@ CPL: chap 8.4
 
 [link to file](./02_scoped_enum.cc)
 
-Introduces the *scoped enum*, extension of the "plain enum" described before. Now the enumerator name
-must be qualified by the enum type name and the scope resolution operator. Implicit conversion to integers
-is not allowed.
+Introduces the *scoped enum*, extension of the "plain enum" described before. Now the enumerator name must be qualified by the enum type name and the scope resolution operator. They are not implicitly converted to integers.
 
 PPP: chap 9.5
 CPL: chap 8.4
@@ -30,17 +27,26 @@ CPL: chap 8.4
 
 [link to file](./03_why_scoped.cc)
 
-This program demonstrates how the plain enum can generate confusion, this is the reason why
-the scoped enum is generally better.
+This program demonstrates how the plain enum can lead to name clashing, which can be avoided through scoped enum.
 
 
 
-## 04_struct_class.cc
+## 04_namespace.cc
 
-[link to file](./04_struct_class.cc)
+[link to file](./04_namespace.cc)
 
-The program implement a very simple `struct` and a very simple `class` to show the different
-behaviour of their members, in particular the private ones of the class.
+`namespace` allows to group variables, functions and classes into a proper set. Examples on the usage of the `namespace` keyword are given.
+
+PPP: 8.7 and 8.7.1
+CPL: chapter 14
+
+
+
+## 05_struct_class.cc
+
+[link to file](./05_struct_class.cc)
+
+The program implements a very simple `struct` and a very simple `class` to show the different *default* visibility of their members.
 
 
 PPP: 9.2, 9.3 and 9.4
@@ -48,12 +54,11 @@ CPL: chap 16 for classes, in particular chap 16.2.4 (class and struct)
 
 
 
-## 05_constructor_destructor.cc
+## 06_constructor_destructor.cc
 
-[link to file](./05_constructor_destructor.cc)
+[link to file](./06_constructor_destructor.cc)
 
-This example introduces you to the concepts of constructor and destructor for a class. Here you
-can also find the first example of *operator overloading*.
+This example introduces you to the concepts of *constructor* and *destructor* of a class. Here you can also find the first example of *operator overloading*.
 
 PPP: chap 9.4.2 constructors, chap 17.5 destructors, chap 9.6 operator overloading
 CPL: chap 16.2.5 constructors, chap 17.2 constructors and destructors, chap 18 operator overloading
@@ -64,11 +69,7 @@ CPL: chap 16.2.5 constructors, chap 17.2 constructors and destructors, chap 18 o
 
 [link to file](./06_template_class.cc)
 
-A naive implemantation of a vector class, using the template for the type stored in the vector.
-This class has a constructor, a destructor, a member function and two versions of the
-array subscript operator [] (the second is declared const and returns a const reference).
-
-
+A naive implementation of a vector class, using the template for the type stored in the vector.
 
 
 
