@@ -162,89 +162,89 @@ namespace internal {
 
 // when the condition is not satisfied, an exception is thrown
 
-#define AP_ERROR(...) \
+#define AP_ERROR(...)                                                          \
   SELECT_MACRO(__VA_ARGS__, _AP_ERROR2, _AP_ERROR1, dummy)(__VA_ARGS__)
 
-#define _AP_ERROR2(cond, exception_type)                                      \
-  if (!(cond))                                                                \
-  ::internal::AssertHelper<exception_type>() =                                \
-      internal::MessageHandler()                                              \
-      << "\n\n"                                                               \
-      << "------------------------------------------------------------------" \
-      << "---"                                                                \
-      << "\n"                                                                 \
-      << "A runtime exception has been thrown\n\n"                            \
-      << "       file: " << __FILE__ << '\n'                                  \
-      << "   function: " << __PRETTY_FUNCTION__ << '\n'                       \
+#define _AP_ERROR2(cond, exception_type)                                       \
+  if (!(cond))                                                                 \
+  ::internal::AssertHelper<exception_type>{} =                                 \
+      internal::MessageHandler{}                                               \
+      << "\n\n"                                                                \
+      << "------------------------------------------------------------------"  \
+      << "---"                                                                 \
+      << "\n"                                                                  \
+      << "A runtime exception has been thrown\n\n"                             \
+      << "       file: " << __FILE__ << '\n'                                   \
+      << "   function: " << __PRETTY_FUNCTION__ << '\n'                        \
       << "       line: " << __LINE__ << "\n\n"
 
 #define _AP_ERROR1(cond) _AP_ERROR2(cond, std::runtime_error)
 
-#define AP_ASSERT(...) \
+#define AP_ASSERT(...)                                                         \
   SELECT_MACRO(__VA_ARGS__, _AP_ASSERT2, _AP_ASSERT1, dummy)(__VA_ARGS__)
 
 #ifndef NDEBUG
-#define _AP_ASSERT_(cond, exception_type) AP_ERROR(cond, exception_type)
+#  define _AP_ASSERT_(cond, exception_type) AP_ERROR(cond, exception_type)
 #else
-#define _AP_ASSERT_(cond, exception_type) \
-  internal::NullStream {}
+#  define _AP_ASSERT_(cond, exception_type)                                    \
+    internal::NullStream {}
 #endif
 
 #define _AP_ASSERT(cond) _AP_ASSERT_(cond, std::runtime_error)
 
-#define _AP_ASSERT2(cond, extype) \
+#define _AP_ASSERT2(cond, extype)                                              \
   _AP_ASSERT_(cond, extype) << "  condition: " << #cond << " is not true\n\n"
 
 #define _AP_ASSERT1(cond) _AP_ASSERT2(cond, std::runtime_error)
 
-#define AP_ASSERT_IN_RANGE(position, lower_bound, upper_bound)               \
-  _AP_ASSERT((position >= lower_bound) && (position <= upper_bound))         \
-      << "Out of range: " << position << " is not in range [" << lower_bound \
+#define AP_ASSERT_IN_RANGE(position, lower_bound, upper_bound)                 \
+  _AP_ASSERT((position >= lower_bound) && (position <= upper_bound))           \
+      << "Out of range: " << position << " is not in range [" << lower_bound   \
       << ", " << upper_bound << "]\n\n"
 
-#define AP_ASSERT_EQ(a, b) \
+#define AP_ASSERT_EQ(a, b)                                                     \
   _AP_ASSERT((a == b)) << a << " was expected to be equal to " << b << std::endl
 
-#define AP_ASSERT_NE(a, b)                                              \
-  _AP_ASSERT((a != b)) << a << " was expected to be not equal to " << b \
+#define AP_ASSERT_NE(a, b)                                                     \
+  _AP_ASSERT((a != b)) << a << " was expected to be not equal to " << b        \
                        << std::endl
 
-#define AP_ASSERT_LT(a, b) \
+#define AP_ASSERT_LT(a, b)                                                     \
   _AP_ASSERT((a < b)) << a << " was expected to be less than " << b << std::endl
 
-#define AP_ASSERT_LE(a, b)                                                    \
-  _AP_ASSERT((a <= b)) << a << " was expected to be less or equal than " << b \
+#define AP_ASSERT_LE(a, b)                                                     \
+  _AP_ASSERT((a <= b)) << a << " was expected to be less or equal than " << b  \
                        << std::endl
 
-#define AP_ASSERT_GT(a, b)                                             \
-  _AP_ASSERT((a > b)) << a << " was expected to be greater than " << b \
+#define AP_ASSERT_GT(a, b)                                                     \
+  _AP_ASSERT((a > b)) << a << " was expected to be greater than " << b         \
                       << std::endl
 
-#define AP_ASSERT_GE(a, b)                                                  \
-  _AP_ASSERT((a >= b)) << a << " was expected to be greater or equal than " \
+#define AP_ASSERT_GE(a, b)                                                     \
+  _AP_ASSERT((a >= b)) << a << " was expected to be greater or equal than "    \
                        << b << std::endl
 
-#define AP_ERROR_IN_RANGE(position, lower_bound, upper_bound)                \
-  AP_ERROR((position >= lower_bound) && (position <= upper_bound))           \
-      << "Out of range: " << position << " is not in range [" << lower_bound \
+#define AP_ERROR_IN_RANGE(position, lower_bound, upper_bound)                  \
+  AP_ERROR((position >= lower_bound) && (position <= upper_bound))             \
+      << "Out of range: " << position << " is not in range [" << lower_bound   \
       << ", " << upper_bound << "]\n\n"
 
-#define AP_ERROR_EQ(a, b) \
+#define AP_ERROR_EQ(a, b)                                                      \
   AP_ERROR((a == b)) << a << " was expected to be equal to " << b << std::endl
 
-#define AP_ERROR_NE(a, b)                                             \
-  AP_ERROR((a != b)) << a << " was expected to be not equal to " << b \
+#define AP_ERROR_NE(a, b)                                                      \
+  AP_ERROR((a != b)) << a << " was expected to be not equal to " << b          \
                      << std::endl
 
-#define AP_ERROR_LT(a, b) \
+#define AP_ERROR_LT(a, b)                                                      \
   AP_ERROR((a < b)) << a << " was expected to be less than " << b << std::endl
 
-#define AP_ERROR_LE(a, b)                                                   \
-  AP_ERROR((a <= b)) << a << " was expected to be less or equal than " << b \
+#define AP_ERROR_LE(a, b)                                                      \
+  AP_ERROR((a <= b)) << a << " was expected to be less or equal than " << b    \
                      << std::endl
 
-#define AP_ERROR_GT(a, b)                                            \
-  AP_ERROR((a > b)) << a << " was expected to be greater than " << b \
+#define AP_ERROR_GT(a, b)                                                      \
+  AP_ERROR((a > b)) << a << " was expected to be greater than " << b           \
                     << std::endl
 
 #define AP_ERROR_GE(a, b)                                                      \
