@@ -2,6 +2,10 @@
 #include <iostream>
 #include <memory>
 
+// functional object
+// In c++11 std::shared_ptr does not support <num[]>
+// so we need to define a proper deallocator
+// this has been fixed since c++14
 template <typename num>
 struct deleter {
   void operator()(num* p) { delete[] p; }
@@ -16,8 +20,23 @@ class Vector {
   explicit Vector(const std::size_t length)
       : _size{length}, elem{new num[_size]{}, deleter<num>{}} {}
 
+  // same constructor using lambda function
+  //
+  // explicit Vector(const std::size_t length)
+  //     : _size{length}, elem{new num[_size], [](num* pointer) {
+  //                             delete[] pointer;
+  //                           }} {}
+
+  // default copy semantic is fine
+  Vector(const Vector&) = default;
+  Vector& operator=(const Vector&) = default;
+
+  // move semantic is fine as well
+  Vector(Vector&&) = default;
+  Vector& operator=(Vector&&) = default;
+
   const num& operator[](const std::size_t& i) const noexcept {
-    return *(elem.get() + i);
+    return *(elem.get() + i);  // operator[] has been introduced in c++17
   }
   num& operator[](const std::size_t& i) noexcept { return *(elem.get() + i); }
 
@@ -32,9 +51,10 @@ class Vector {
 
   void deep_copy() {
     if (elem.use_count() > 1) {
-      std::cout << "deep\n";
       const num* p = elem.get();
-      elem = std::shared_ptr<num>{new num[_size], deleter<num>{}};
+      elem.reset(new num[_size],
+                 deleter<num>{});  // the previous array will not be deallocated
+                                   // because use_count was > 1
       std::copy(p, p + _size, elem.get());
     }
   }
@@ -55,19 +75,20 @@ int main() {
   std::cout << "v1 = " << v1;
   std::cout << "v2 = " << v2;
 
-  v1[0] = 99;
+  v2[0] = 99;
 
-  std::cout << "\nv1[0] = 99;\n";
+  std::cout << "\nv2[0] = 99;\n";
   std::cout << "v1 = " << v1;
   std::cout << "v2 = " << v2;
 
   std::cout << "\nv2.deep_copy();\n";
   std::cout << "v2.deep_copy();\n";
-  std::cout << "v1[6] = 77;\n";
+  std::cout << "v2[6] = 77;\n";
 
+  // before actually writing on v2 we call a deep_copy
   v2.deep_copy();
   v2.deep_copy();
-  v1[6] = 77;
+  v2[6] = 77;
 
   std::cout << "v1 = " << v1;
   std::cout << "v2 = " << v2;

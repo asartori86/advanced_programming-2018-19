@@ -24,8 +24,8 @@ class Vector {
 
   // default ctor
   Vector() { std::cout << "default ctor\n"; }  // _size uninitialized
-  // Vector() = default;
-  // Vector() : _size{}, elem{} { std::cout << "default ctor\n"; }
+  // Vector() : _size{}, elem{} { std::cout << "default ctor\n"; } // this could
+  // be better Vector() = default;
 
   ~Vector() noexcept = default;
 
