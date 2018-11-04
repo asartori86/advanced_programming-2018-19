@@ -5,7 +5,8 @@ struct S {
   int a;
   double b;
   std::string s;  // default ctor of string set s to empty string
-  // S() = default;
+  S() = default;
+  S(const S&) = delete;  // cannot use a copy ctor
 };
 
 int main() {
@@ -23,6 +24,8 @@ int main() {
   std::cout << s1.a << "--" << s1.b << "--" << s1.s << "\n";
   std::cout << s2.a << "--" << s2.b << "--" << s2.s << "\n";
   std::cout << s3.a << "--" << s3.b << "--" << s3.s << "\n";
+
+  // S s4(s2); // compiler error
 
   return 0;
 }
