@@ -1,10 +1,10 @@
-SRC = 00_surprise.cc      \
-      01_default.cc       \
+SRC = 01_surprise.cc      \
       02_default.cc       \
-      03_buggy_vector.cc  \
+      03_default.cc       \
       04_buggy_vector.cc  \
-      05_copy_move.cc     \
-      06_copy_on_write.cc
+      05_buggy_vector.cc  \
+      06_copy_move.cc     \
+      07_copy_on_write.cc
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -g -std=c++11
