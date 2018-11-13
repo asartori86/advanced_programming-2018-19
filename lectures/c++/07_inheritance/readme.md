@@ -6,8 +6,7 @@
 
 [link to file](./00_first_trial.cc)
 
-A naive implementation of a base class (animal) and of some derived classes without
-using inheritance.
+A naive and conceptually wrong implementation of a series of classes that share data and inheritance.
 
 PPP: chap 14.3
 CPL: chap 20.1, 20.2
@@ -18,9 +17,7 @@ CPL: chap 20.1, 20.2
 
 [link to file](./01_inheritance.cc)
 
-In this implementation *inheritance* is used, it shows also what can happen when you handle a
-derived class with a base class pointer.
-
+A wrong implementation with *inheritance*. In particular, the run-time polymorphism is not working.
 
 PPP: chap 14.3
 CPL: chap 20.1, 20.2
@@ -32,7 +29,7 @@ CPL: chap 20.1, 20.2
 [link to file](./02_virtual.cc)
 
 This program shows the usage of the `virtual` keyword when working with derived classes methods.
-The specifier `override` is used to force the override of a base class method.
+The specifier `override` is used to force the compiler to check that we are actually overriding a function of the base class.
 
 PPP: chap 14.3.2
 CPL: chap 3.2.2, 3.2.3, 3.2.4 for an introduction, chap 20 for more details
@@ -45,8 +42,7 @@ CPL: chap 3.2.2, 3.2.3, 3.2.4 for an introduction, chap 20 for more details
 [link to file](./03_virtual_destructor.cc)
 
 Shows the order in which the constructors and the destructors for derived objects are
-called. This is one of the reasons why a *virtual destructor* is needed when working with pointers
-to base classes.
+called. Using run-time polymorphism, to call the proper destructor (and not always and only the destructor of the base class), the destructor of the base class must be *virtual*.
 
 PPP: chap 17.5.2
 CPL: chap 17.2.5

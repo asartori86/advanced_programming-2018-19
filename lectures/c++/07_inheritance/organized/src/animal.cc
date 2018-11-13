@@ -4,8 +4,7 @@
 Animal::Animal() : Animal{0, 0} {}
 
 Animal::Animal(const unsigned int a, const double w) : age{a}, weight{w} {
-  if (weight < 0)
-    AP_error("invalid weight:", w);
+  AP_ERROR_GE(w,0) << "invalid weight";
 }
 
 // virtual Animal::info() const noexcept{   would be error: do not repeat
