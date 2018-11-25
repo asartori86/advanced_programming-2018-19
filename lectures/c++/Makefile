@@ -6,3 +6,5 @@
 	+$(MAKE) $@ -C 05_error_handling
 	+$(MAKE) $@ -C 06_copy_move_semantics
 	+$(MAKE) $@ -C 07_inheritance
+	+$(MAKE) $@ -C 08_iterators
+	+$(MAKE) $@ -C 09_STL
