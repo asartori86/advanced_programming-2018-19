@@ -1,4 +1,4 @@
-## Lecture 01_intro
+## Lecture 02
 
 ## Contents
 - modules and packages
