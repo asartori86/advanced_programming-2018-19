@@ -1,0 +1,17 @@
+date:2008-05-15; from:Dewey; to:Sneezy;
+date:2017-05-24; from:Dopey; to:Hook;
+date:2010-12-31; from:Pluto; to:Dewey;
+date:2015-07-31; from:SnowWhite; to:Bashful;
+date:2009-03-27; from:SnowWhite; to:Bashful;
+date:2010-03-26; from:Dopey; to:$crooge;
+date:2011-05-31; from:Daisy; to:Sneezy;
+date:2012-05-05; from:Sleepy; to:Grumpy;
+date:2015-09-28; from:Grumpy; to:Mickey;
+date:2011-02-27; from:Goofy; to:Hook;
+date:2015-08-06; from:Grumpy; to:Louie;
+date:2009-11-27; from:Huey; to:Dewey;
+date:2016-03-12; from:Doc; to:$crooge;
+date:2011-01-07; from:SnowWhite; to:Happy;
+date:2013-09-18; from:Grumpy; to:Happy;
+date:2008-11-25; from:Alice; to:Mickey;
+date:2017-11-15; from:Dewey; to:Minnie;
