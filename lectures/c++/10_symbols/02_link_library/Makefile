@@ -3,7 +3,7 @@ GDIR=../01_greetings_library
 
 LFLAGS = -lgreetings -L $(GDIR)
 CXX = c++
-CXXFLAGS = -I include -I $(GDIR)/include
+CXXFLAGS = -I include -I $(GDIR)/include -std=c++11
 
 all: $(EXE)
 
