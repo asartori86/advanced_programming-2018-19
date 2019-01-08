@@ -12,5 +12,9 @@ all: $(EXE)
 clean:
 	rm -rf *~ $(EXE)
 
+format: $(SRC)
+	@clang-format -i $^ 2>/dev/null || echo "Please install clang-format to run this commands"
+
+
 .PHONY: clean all
 
