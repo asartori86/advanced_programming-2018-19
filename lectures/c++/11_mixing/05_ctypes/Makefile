@@ -3,7 +3,7 @@ CC = cc
 all: libhello.so
 
 libhello.so: hello.c
-	$(CC) -shared -fpic -o $@ $<
+	$(CC) -shared -fpic -o $@ $< -std=c11
 
 clean:
 	rm -f *~ libhello.so
