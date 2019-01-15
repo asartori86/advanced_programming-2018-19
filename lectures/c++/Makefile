@@ -9,3 +9,4 @@
 	+$(MAKE) $@ -C 08_iterators
 	+$(MAKE) $@ -C 09_STL
 	+$(MAKE) $@ -C 10_symbols
+	+$(MAKE) $@ -C 11_mixing
